@@ -1,0 +1,20 @@
+{
+  "name": "clases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch C:\\Users\\ASUS\\Documents\\4toSemestre\\proyects\\desarrolloAppsWeb\\clases\\MVC_01\\index.js",
+    "bdd": "json-server --watch db.json --port=4000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "json-server": "^1.0.0-beta.0",
+    "uuid": "^9.0.1"
+  }
+}

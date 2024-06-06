@@ -1,0 +1,22 @@
+{
+  "tours": [
+    {
+      "id": "3fb91306-3f36-45ce-8f5b-1fe9fc3ecb39",
+      "name": "Tour al Quilotoa",
+      "precio": 15,
+      "foto": "quilotoa.png"
+    },
+    {
+      "id": "3bd71d94-4acc-49ae-a287-933ac5c6a699",
+      "name": "Tour al Quilotoa",
+      "precio": 15,
+      "foto": "quilotoa.png"
+    },
+    {
+      "id": "dbf1e9c8-a2d1-4873-a712-66f2b109a552",
+      "name": "Tour al Centro Histórico",
+      "precio": 20,
+      "foto": "historico_san_francisco.png"
+    }
+  ]
+}
