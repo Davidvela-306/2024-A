@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch C:\\Users\\ASUS\\Documents\\4toSemestre\\proyects\\desarrolloAppsWeb\\clases\\MVC_01\\index.js",
+    "dev": "node --watch index.js",
     "bdd": "json-server --watch db.json --port=4000"
   },
   "keywords": [],

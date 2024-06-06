@@ -1,0 +1,74 @@
+{
+  "tours": [
+    {
+      "id": "3e79f0ee-2730-4c30-8726-aa331c984e38",
+      "nombre": "Quito City Tour",
+      "descripcion": "Circuito panorámico",
+      "foto": "Bus.png"
+    },
+    {
+      "id": "0c95c31d-c5e6-452f-a5bb-299bcb5ee707",
+      "name": "scarlett",
+      "description": "123"
+    },
+    {
+      "id": "7a4b5fdf-3321-44c2-b527-47c6fa73a4a7",
+      "nombre": "tour Panecillo",
+      "descripcion": "noche"
+    },
+    {
+      "id": "e39bfec8-3e5e-4043-b8c3-5feb35c54219",
+      "nombre": "tour Panecillo",
+      "descripcion": "noche"
+    },
+    {
+      "id": "db72aa5a-a3f8-4e18-8946-c70e77d8690b",
+      "nombre": "tour Panecillo",
+      "descripcion": "noche"
+    },
+    {
+      "id": "5748e4d4-903a-468b-b2c3-2d18463ab87a",
+      "nombre": "tour Panecillo",
+      "descripcion": "noche",
+      "image": "https://res.cloudinary.com/dqg7zopna/image/upload/v1717706893/tours/uchhw19yl6t7qle8zw71.jpg",
+      "public_id": "tours/uchhw19yl6t7qle8zw71"
+    }
+  ],
+  "users": [
+    {
+      "id": "2958890f-309c-4918-a113-0beafa99c971",
+      "password": "$2b$10$IalRCtbjzcaCQaQKgifgB.WTOgJEUQMze3LVS5RDthREzavX.BFQG",
+      "username": "Byron"
+    },
+    {
+      "id": "cbd132e8-e826-42b8-b26b-25c22685eed2",
+      "password": "$2b$10$z81ISCEDdbNKKBv9JtGBauFHXu7R5L3rV8amjH1PYWYwUHA6NmesW",
+      "username": "Byron"
+    },
+    {
+      "id": "79d85164-ba10-42df-b7cb-60964ed5c753",
+      "password": "$2b$10$H3pToNiTap3FG8xFMq/CwuCgiOcMUufrszFmjHK/smxbATK8PZOVW",
+      "username": "david"
+    },
+    {
+      "id": "7b90efa2-34bf-414f-909a-90575df29024",
+      "password": "$2b$10$TBU244uDNBug.McsgaHdweVAOp0r9HPJO3El7YzED0QXxwK23QMN6",
+      "username": "scarlett"
+    },
+    {
+      "id": "8bb952b1-6247-4bef-b8f1-c47ee5ca308a",
+      "password": "$2b$10$SgiMk8kX0NmjeJD2tlqkreqLoIE7gU5qL7EhaAT34odTMMW7Xi.cO",
+      "username": "scarlett"
+    },
+    {
+      "id": "bb863d4a-8360-4c73-9339-0bc07d6d64c5",
+      "password": "$2b$10$zCsE5SylCySh8UIDSAUV9uP/5yen3fLU4SE2guLjDZ9hH1IDyF1eW",
+      "username": "scarlett"
+    },
+    {
+      "id": "9c015d5e-ef2c-42d7-a78a-da9880dc57ef",
+      "password": "$2b$10$oWQ6VBCheMLA2x5.EhAueOGoWODKy/TzYB73UM70c5bPNuOEBCHDq",
+      "username": "scarlett"
+    }
+  ]
+}
