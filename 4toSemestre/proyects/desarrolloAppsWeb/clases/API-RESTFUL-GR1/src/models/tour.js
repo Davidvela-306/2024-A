@@ -7,7 +7,7 @@ const tourModel = {
         //? 2.- Obtener respuesta de la BDD para enviar al controlador
     async getAllToursModel (){
         //: Punto 1
-        const peticion = await fetch('http://localhost:4000/tours')
+        const peticion = await fetch('https://tours.free.beeceptor.com/api/tours')
         //: Punto 2
         const tours = await peticion.json()
         return tours
@@ -18,7 +18,7 @@ const tourModel = {
         //? 2.- Obtener respuesta de la BDD para enviar al controlador
     async createTourModel (newTour){
         //: Punto 1
-        const url = 'http://localhost:4000/tours'
+        const url = 'https://tours.free.beeceptor.com/api/tours'
         const peticion = await fetch(url,{
             method:'POST',                               // VERBO
             body:JSON.stringify(newTour),                // INFO

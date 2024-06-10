@@ -18,7 +18,7 @@ router.get("/tours", getAllToursController);
 router.get("/tours/:id", getTourByIdController);
 
 //! Rutas privadas
-router.post("/tours", verifyToken, createTourController);
+router.post("/tours",  createTourController);
 
 //! Rutas privadas
 router.put("/tours/:id", verifyToken, updateTourController);

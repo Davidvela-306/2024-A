@@ -32,6 +32,27 @@
       "descripcion": "noche",
       "image": "https://res.cloudinary.com/dqg7zopna/image/upload/v1717706893/tours/uchhw19yl6t7qle8zw71.jpg",
       "public_id": "tours/uchhw19yl6t7qle8zw71"
+    },
+    {
+      "id": "fa3a1e38-08ed-4051-95e1-37888949d0ee",
+      "nombre": "tour",
+      "descripcion": "nuevo tour 1",
+      "image": "https://res.cloudinary.com/dqg7zopna/image/upload/v1718055453/tours/ic2vc7blzsn7gnzi8rju.jpg",
+      "public_id": "tours/ic2vc7blzsn7gnzi8rju"
+    },
+    {
+      "id": "fc9913b4-2953-4310-8f31-e6be7cb329e3",
+      "nombre": "tour",
+      "descripcion": "nuevo tour 1",
+      "image": "https://res.cloudinary.com/dqg7zopna/image/upload/v1718055476/tours/oudlcmmkqdjsofah66zo.jpg",
+      "public_id": "tours/oudlcmmkqdjsofah66zo"
+    },
+    {
+      "id": "ae99f188-9dfd-4a2d-a2e6-5ac428717e67",
+      "nombre": "tour",
+      "descripcion": "nuevo tour 1",
+      "image": "https://res.cloudinary.com/dqg7zopna/image/upload/v1718055549/tours/edkb3hfpkzgzutfz4n3v.jpg",
+      "public_id": "tours/edkb3hfpkzgzutfz4n3v"
     }
   ],
   "users": [
@@ -69,6 +90,21 @@
       "id": "9c015d5e-ef2c-42d7-a78a-da9880dc57ef",
       "password": "$2b$10$oWQ6VBCheMLA2x5.EhAueOGoWODKy/TzYB73UM70c5bPNuOEBCHDq",
       "username": "scarlett"
+    },
+    {
+      "id": "18676b91-f99d-49e4-94cf-87dae8b28e95",
+      "password": "$2b$10$ZtKFMdjnPhzgmGw7Lu7gReID.Ytcq0MSnUzSnor56KWWVybN6doAW",
+      "username": "david"
+    },
+    {
+      "id": "0a76fe5d-6c75-46e5-a87a-72f71580af92",
+      "password": "$2b$10$amB.I3tmNVlVzOm3HcaHr.lyRWv7n344lf03rFI3nsBt5vfAtki3C",
+      "username": "d"
+    },
+    {
+      "id": "37f3cab4-33cc-4331-921a-9d3f57896e9d",
+      "password": "$2b$10$kAcw2dNHNIRA27sKZ0fq2..CR5KODSmRw7RClJee5uYH.Y8GaP53m",
+      "username": "d"
     }
   ]
 }

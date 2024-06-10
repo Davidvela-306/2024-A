@@ -24,8 +24,9 @@ const registerUserController = async (req, res) => {
   //TODO PUNTO 2
   const user = await userModel.registerUserModel(newUserData);
   //TODO PUNTO 3
-  res.status(201).json({ user, token }); //le enviamos al frontend info y token
+  res.status(201).json({ user }); //le enviamos al frontend info y token
 };
+
 
 //! Método del controlador, hace 3 cosas
 //?1 Tomar el req de la ruta
