@@ -1,8 +1,9 @@
-//importar app
+// Importar app
 import app from "./server.js";
-import connection from './database.js';
 
-connection()
+import connection from "./database.js";
+
+connection();
 
 // Utilizar el método listen
 app.listen(app.get("port"), () => {

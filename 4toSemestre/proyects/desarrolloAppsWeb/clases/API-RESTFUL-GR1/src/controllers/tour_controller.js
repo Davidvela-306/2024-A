@@ -7,24 +7,20 @@ import fs from "fs-extra";
 //? 1. Tomar el request de la ruta
 //? 2. Invocar el método del modelo
 //? 3.- Mandar la respuesta al frontend
-//: Punto 1
+//TODO : Punto 1
 const getAllToursController = async (req, res) => {
   try {
     console.log("Verificar-------");
-    //: Punto 2
+    //TODO : Punto 2
     const tours = await tourModel.getAllToursModel();
     console.log(tours);
-    //: Punto 3
+    //TODO : Punto 3
     res.status(200).json(tours);
   } catch (error) {
     res.status(500).json({ mgs: error });
   }
 };
 
-//! Método del Controlador
-//? 1. Tomar el request de la ruta
-//? 2. Invocar el método del modelo
-//? 3.- Mandar la respuesta al frontend
 const createTourController = async (req, res) => {
   //TODO PUNTO  1
   const newTourData = {
