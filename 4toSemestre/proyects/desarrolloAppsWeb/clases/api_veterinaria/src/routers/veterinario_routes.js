@@ -20,12 +20,12 @@ import verificarAutenticacion from "../middlewares/autenticacion.js";
 //Ruta para el registro
 router.post("/registro", registro);
 
-//Ruta para confirmar el email
+//Ruta para confirmar el email - en gmail o Outlook
 router.get("/confirmar/:token", confirmEmail);
-//Ruta para confirmar recuperar password con token:
-router.get("/recuperar-password/:token", comprobarTokenPasword);
 //Ruta para confirmar recuperar password:
 router.post("/recuperar-password", recuperarPassword);
+//Ruta para confirmar recuperar password con token - en gmail o Outlook: 
+router.get("/recuperar-password/:token", comprobarTokenPasword);
 //Ruta para crear password:
 router.post("/nuevo-password/:token", nuevoPassword);
 
