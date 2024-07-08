@@ -54,9 +54,15 @@ const pacienteSchema = new Schema(
       default: true,
     },
     veterinario: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId, //pk veterinario
       ref: "Veterinario",
     },
+    tratamientos: [
+      {
+        type: mongoose.Schema.Types.ObjectId, //pk tratamientos
+        ref: "Tratamiento",
+      },
+    ],
   },
   {
     timestamps: true,

@@ -2,6 +2,7 @@
 import jwt from "jsonwebtoken";
 // Importar el modelo Veterinario para interactuar con la BD
 import Veterinario from "../models/Veterinario.js";
+import Paciente from "../models/Paciente.js";
 
 // Definir el middleware de autenticación
 const verificarAutenticacion = async (req, res, next) => {
@@ -22,6 +23,7 @@ const verificarAutenticacion = async (req, res, next) => {
       // Se verifica el token usando la clave secreta almacenada en process.env.JWT_SECRET.
       process.env.JWT_SECRET
     );
+    console.log(id, rol );
     if (rol === "veterinario") {
       //Se busca en la base de datos un veterinario con el ID extraído del token.
       // Se usa .lean() para obtener un objeto JavaScript plano y .select("-password") para excluir el campo de contraseña.
@@ -31,10 +33,15 @@ const verificarAutenticacion = async (req, res, next) => {
         .lean()
         .select("-password");
       next();
+    } else {
+      req.pacienteBDD = await Paciente.findById(id).lean().select("-password");
+      console.log(req.pacienteBDD);
+      next();
     }
   } catch (error) {
     // Si ocurre un error durante la verificación del token:
     const e = new Error("Formato del token no válido");
+    console.log(e);
     return res.status(404).json({ msg: e.message });
   }
 };

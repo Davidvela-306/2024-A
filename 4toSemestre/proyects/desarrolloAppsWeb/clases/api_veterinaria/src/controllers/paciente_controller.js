@@ -1,12 +1,66 @@
 import { sendMailToPaciente } from "../config/nodemailer.js";
+import generarJWT from "../helpers/crearJWT.js";
 import Paciente from "../models/Paciente.js";
 import mongoose from "mongoose";
 
-const loginPaciente = (req, res) => {
+const loginPaciente = async (req, res) => {
   //   res.send("Login del paciente");
+  //TODO ETAPA 1 | REQ
+  const { email, password } = req.body;
+
+  //TODO ETAPA 2 | VALIDACIONES
+  if (Object.values(req.body).includes(""))
+    return res
+      .status(404)
+      .json({ msg: "Lo sentimos, debes llenar todos los campos" });
+  const pacienteBDD = await Paciente.findOne({ email });
+
+  if (!pacienteBDD)
+    return res
+      .status(404)
+      .json({ msg: "Lo sentimos, el usuario no se encuentra registrado" });
+
+  const verificarPassword = await pacienteBDD.matchPassword(password);
+  if (!verificarPassword)
+    return res
+      .status(404)
+      .json({ msg: "Lo sentimos, el password no es el correcto" });
+
+  //TODO ETAPA 3 | BDD
+  const token = generarJWT(pacienteBDD._id, "paciente");
+  const {
+    nombre,
+    propietario,
+    email: emailP,
+    celular,
+    convencional,
+    _id,
+  } = pacienteBDD;
+
+  //TODO ETAPA 4 | FRONT
+  res.status(200).json({
+    token,
+    nombre,
+    propietario,
+    emailP,
+    celular,
+    convencional,
+    _id,
+  });
 };
 const perfilPaciente = (req, res) => {
   //   res.send("Perfil del paciente");
+
+  // eliminamos la info no necesaria, para que el front consuma solo la que interesa
+  delete req.pacienteBDD.ingreso;
+  delete req.pacienteBDD.sintomas;
+  delete req.pacienteBDD.salida;
+  delete req.pacienteBDD.estado;
+  delete req.pacienteBDD.veterinario;
+  delete req.pacienteBDD.createdAt;
+  delete req.pacienteBDD.updatedAt;
+  delete req.pacienteBDD.__v;
+  res.status(200).json(req.pacienteBDD);
 };
 const listarPacientes = async (req, res) => {
   //   res.send("Listar pacientes");
@@ -51,7 +105,7 @@ const registrarPaciente = async (req, res) => {
   //TODO ETAPA 3 | BDD
   const nuevoPaciente = new Paciente(req.body);
   const password = Math.random().toString(36).slice(2); //78521365253..
-  nuevoPaciente.password = await nuevoPaciente.encrypPassword(password);
+  nuevoPaciente.password = await nuevoPaciente.encrypPassword("vet" + password);
   await sendMailToPaciente(email, "vet" + password);
   nuevoPaciente.veterinario = req.veterinarioBDD._id;
   await nuevoPaciente.save();
@@ -59,7 +113,6 @@ const registrarPaciente = async (req, res) => {
   //TODO ETAPA 4 | FRONT
   res.status(200).json({ msg: "Registro exitoso del paciente." });
 };
-
 const actualizarPaciente = async (req, res) => {
   //   res.send("Actualizar paciente");
   const { id } = req.params;
